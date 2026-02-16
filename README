@@ -1,0 +1,9 @@
+# API DevBills
+
+API REST construída com Fastify + TypeScript.
+
+## Tecnologias
+- Node 22
+- Fastify
+- TypeScript
+- tsx
