@@ -1,18 +1,32 @@
 {
   "name": "api-devbils",
   "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
+  "description": "API DevBils - Fastify + TypeScript",
+  "main": "dist/server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "biome lint .",
+    "format": "biome format . --write",
+    "check": "biome check .",
+    "typecheck": "tsc --noEmit"
   },
+  "keywords": [],
+  "author": "Gilvane",
   "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "5",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.7.4",
+    "zod": "^4.3.6"
+  },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.1",
     "@types/node": "^25.2.3",
+    "cross-env": "^7.0.3",
+    "prisma": "5",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "fastify": "^5.7.4"
   }
 }
